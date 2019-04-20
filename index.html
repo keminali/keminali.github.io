@@ -1,2 +1,471 @@
-hello world
-This is first try
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>test</title>
+<!-- 2019-04-16 Tue 22:15 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="kaiming" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/bigblow/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/bigblow/css/bigblow.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/bigblow/css/hideshow.css"/>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.localscroll-min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.zclip.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/bigblow.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/hideshow.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">test</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Grid/mesh independence&#xa0;&#xa0;&#xa0;<span class="tag"><span class="GCI">GCI</span></span></a>
+<ul>
+<li><a href="#sec-1-1">1.1. Richardson extrapolation</a></li>
+<li><a href="#sec-1-2">1.2. grid refinement ratio</a></li>
+<li><a href="#sec-1-3">1.3. Example of Grid convergence study</a></li>
+<li><a href="#sec-1-4">1.4. calculation steps</a></li>
+<li><a href="#sec-1-5">1.5. Example of Grid convergence for wing:</a></li>
+<li><a href="#sec-1-6">1.6. References</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Grid/mesh independence&#xa0;&#xa0;&#xa0;<span class="tag"><span class="GCI">GCI</span></span></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+keywords: Richardson's extrapolation, Grid convergence index
+a summary of Richardson's extrapolation is <a href="https://www.grc.nasa.gov/www/wind/valid/tutorial/bibliog.html#Roach94">here</a>
+</p>
+
+<p>
+requirement: GCI &lt; 5%
+</p>
+
+
+
+
+<p>
+<a href="https://www.grc.nasa.gov/www/wind/valid/tutorial/spatconv.html">a summary of GCI</a> from nasa web , local downloaded file is <a href="C:\akmkemin\Backup\ANSYS\Geo_mesh_solver_post_processing\Convergence-Verification-validation\grid convergence">here</a> ( print version is in <b>BEM</b> file folder)
+</p>
+</div>
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Richardson extrapolation</h3>
+</div>
+
+
+
+
+
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> grid refinement ratio</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>Hexa mesh &#x2013;&gt;&gt;   grid refinement ratio
+<ul class="org-ul">
+<li>double nodes along each coordinates (x, y,z)
+</li>
+</ul>
+</li>
+
+<li>Tetra mesh &#x2013;&gt;&gt; effective grid refinement ratio
+</li>
+</ul>
+
+<p>
+<b>Definitions:</b>
+</p>
+
+<p>
+\[
+r_{ij} = h_i/h_j
+\]
+</p>
+
+<ul class="org-ul">
+<li>r: grid refinement ratio,  
+</li>
+<li>h: grid spacing
+</li>
+</ul>
+</div>
+
+<ol class="org-ol"><li><a id="sec-1-2-0-1" name="sec-1-2-0-1"></a>effective grid refinement ratio<br  /><div class="outline-text-5" id="text-1-2-0-1">
+<p>
+For tetra mesh, the effective grid refinement ratio is defined as:
+</p>
+
+\begin{equation}
+r_e =( \frac{N_1}{N_2})
+^{1/D}
+\end{equation}
+
+<p>
+Where \( N \) is the total number of grid point and \( D \) is the dimension of the flow domain. 
+</p>
+</div>
+</li></ol>
+</div>
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> Example of Grid convergence study</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+The example is from <a href="https://www.grc.nasa.gov/www/wind/valid/tutorial/spatconv.html">here</a>, 
+The Fortran 90 program  <a href="c:/Users/exw692/Dropbox/Emacs/verify.f90">verify.f90</a> was written to carry out the calculations associated with a grid convergence study involving 3 or more grids
+The program is compiled on a unix system through the commands:
+</p>
+
+<p>
+<code>f90 verify.f90 -o verify</code>
+</p>
+
+<p>
+It reads in an ASCII file (<code>prD.do</code>) through the standard input unit (5) that contains a list of pairs of grid size and value of the observed quantity f.
+</p>
+
+<p>
+input data format:
+<code>1.0 0.97050 2.0 0.96854 4.0 0.96178</code>
+ <code>verify &lt; prD.do &gt; prD.out</code>
+</p>
+
+<p>
+It assumes the values from the finest grid are listed first. The output is then written to the standard output unit (6) <code>prD.out</code>.
+ The output from the of {\tt verify} for the results of Appendix A are:
+</p>
+
+<p>
+#+BEGIN<sub>EXAMPLE</sub>
+</p>
+
+<p>
+&#x2014; VERIFY: Performs verification calculations &#x2014;
+</p>
+
+<p>
+Number of data sets read =  3
+</p>
+
+<p>
+Grid Size     Quantity
+</p>
+
+<p>
+1.000000      0.970500
+2.000000      0.968540
+4.000000      0.961780
+</p>
+
+<p>
+Order of convergence using first three finest grid 
+and assuming constant grid refinement (Eqn. 5.10.6.1) 
+Order of Convergence, p =  1.78618479
+</p>
+
+<p>
+Richardson Extrapolation: Use above order of convergence
+and first and second finest grids (Eqn. 5.4.1) 
+Estimate to zero grid value, f<sub>exact</sub> =  0.971300304
+</p>
+
+<p>
+Grid Convergence Index on fine grids. Uses p from above.
+Factor of Safety =  1.25
+</p>
+
+<p>
+Grid     Refinement            
+Step      Ratio, r       GCI(%)
+1  2      2.000000      0.103080
+2  3      2.000000      0.356244
+</p>
+
+<p>
+Checking for asymptotic range using Eqn. 5.10.5.2.
+A ratio of 1.0 indicates asymptotic range.
+</p>
+
+<p>
+Grid Range    Ratio
+12 23      0.997980
+</p>
+
+<p>
+&#x2014; End of VERIFY &#x2014;
+</p>
+
+<p>
+#+END _EXAMPLE
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> calculation steps</h3>
+<div class="outline-text-3" id="text-1-4">
+<ol class="org-ol">
+<li>Complete at least 3 simulations (Coarse, medium, fine) with a constant refinement ratio, r, between them (in our example we use r=2)
+</li>
+<li>Choose a parameter indicative of grid convergence. In most cases, this should be the parameter you are studying. ie if you are studying drag, you would use drag.
+</li>
+<li>Calculate the order of convergence, p, using:
+</li>
+</ol>
+
+\begin{equation}
+p=ln(\frac{f_3 - f_2}{f_2- f_1}) / \ln (r)
+\end{equation}
+<p>
+where \( f_i \) is the solution at different meshes, f<sub>1</sub> is fine grid, \( r \) is <i>grid refinement ratio</i>.
+</p>
+
+<ol class="org-ol">
+<li>Perform a Richardson extrapolation to predict the value at h=0
+</li>
+</ol>
+
+\begin{equation}
+f_e = f_1 + \frac{f_1 -f_2 }{r^p - 1}
+\end{equation}
+<p>
+f<sub>e</sub>, exact numerical value ( continuum value at zero grid spacing)
+</p>
+
+<ol class="org-ol">
+<li>Calculate grid convergence index (GCI) for the medium and fine refinement levels
+</li>
+</ol>
+
+\begin{equation}
+GCI_{fine} = \frac{F_s \vert \epsilon \vert }{r^p - 1}
+\end{equation}
+
+<p>
+where \( F_s \) is a safety factor. the recommended value is 3 for two grids comparisons and 1.25 for three or more grids comparisons.
+</p>
+
+<ol class="org-ol">
+<li>Ensure that grids are in the asymptotic range of convergence by checking:
+\frac{GCI<sub>2,3</sub>}{r<sup>p</sup> &times; GCI<sub>1,2</sub>} \approxeq 1
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-sec-1-5" class="outline-3">
+<h3 id="sec-1-5"><span class="section-number-3">1.5</span> Example of Grid convergence for wing:</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+<a href="C:\akmkemin\Backup\academic\Notes\ANSYS\mesh\Modules\wings\wing-mesh-comparing-pointwise.doc">C:\akmkemin\Backup\academic\Notes\ANSYS\mesh\Modules\wings\wing-mesh-comparing-pointwise.doc</a>
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-1-6" class="outline-3">
+<h3 id="sec-1-6"><span class="section-number-3">1.6</span> References</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+Roache, P. J. Perspective: A Method for Uniform Reporting of Grid Refinement Studies, Journal of Fluids Engineering, Vol. 116, 1994; 405-413.
+</p>
+
+<p>
+Roache, P. J. Quantification of Uncertainty in Computational Fluid Dynamics, in Annual Review of Fluid Mechanics
+</p>
+
+<p>
+Roache, Patrick J. Verification and validation in computational science and engineering. Vol. 895. Albuquerque, NM: Hermosa, 1998.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: kaiming</p>
+<p class="date">Created: 2019-04-16 Tue 22:15</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
