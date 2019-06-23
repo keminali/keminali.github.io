@@ -61,5 +61,5 @@ plot 'area_averaged_axial_mean_velocity_TI_1.txt' using 1:6 ls 1 with points tit
 #+end_src
 *output*
 
-file:Fig/k_fit_park_model.png
+file:./Fig/k_fit_park_model.png
 
