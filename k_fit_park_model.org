@@ -60,5 +60,6 @@ set key spacing 1
 plot 'area_averaged_axial_mean_velocity_TI_1.txt' using 1:6 ls 1 with points title 'RANS', f(x) lw 3 title "best fitted"
 #+end_src
 *output*
-file:https://github.com/keminali/keminali.github.io/blob/master/Fig/k_fit_park_model.png
-[[https://github.com/keminali/keminali.github.io/blob/master/Fig/k_fit_park_model.png][ Least square fit of k in park model]]
+
+file:Fig/k_fit_park_model.png
+
