@@ -1,5 +1,7 @@
 * k in Park Model using Gnuplot
 *input*
+
+file: area_averaged_axial_mean_velocity_TI_1.txt
 #+begin_src
 # One Rotor, front, eldad blade
 # TSR 5, TI =15%
