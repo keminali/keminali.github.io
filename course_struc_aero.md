@@ -1,8 +1,13 @@
 * Aerospace Engineering
+
 ** Year 1
+
 Semester A:	MAT4002 (4)
+
 Engineering Design Methods	DEN4101 (4)
+
 Mechanics of Fluids 1	DEN4122 (4)
+
 Mathematics and Computing for Engineers 1	DEN4005 (4)
 Exploring Aerospace Engineering
 
